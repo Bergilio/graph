@@ -27,19 +27,31 @@ To be noted that `String_View` was created to facilitate and organize the parsin
 ### Notation
 
 Notation (n -> a1:10 | a2:12 | a3 ...):
-    1. Every line represents an adjacency list
-    2. To the left of the '->' you find the code(char*) of the node that owns the list
-    3. To the right of the '->' you find one or more codes(char*) of the nodes that can be found in the list, separated by '|'
-    4. Nodes with empty lists can be defines as 'e ->' or 'e'. In case they have been referenced in other lists, this is optional representation
-    5. '-> a1 | a2', 'a1 | a2' are not accepted, the owner of the edges has to be specified
-    6. Leading and trailing white spaces are ignored, i.e., ' n -> a1 | a2 ' = 'n->a1|a2'
-    7. Nodes can be named with multiple chars, that might include white spaces.
-    ' Hello World -> Lore ipsum ' will result in a node with code='Hello World' and one node in its adjacency list where code='Lore ipsum'
-    8. '|', ':' and '->' are not allowed in node names
-    9. A single trailing '|' is valid, as long as it is specified at least one adjacent node, e.g. 'n -> a1 |'
-    10. After the name of a node given after '->' (as an adjacent node), the weight of the edge can be specified, following ':'
-    11. Once again, any amount of leading or trailing white spaces can be existent between the code of the node or the wight and ':''
-    12. The weights can only be integers (for now)
+
+1. Every line represents an adjacency list
+    
+2. To the left of the '->' you find the code(char*) of the node that owns the list
+    
+3. To the right of the '->' you find one or more codes(char*) of the nodes that can be found in the list, separated by '|'
+    
+4. Nodes with empty lists can be defines as 'e ->' or 'e'. In case they have been referenced in other lists, this is optional representation
+    
+5. '-> a1 | a2', 'a1 | a2' are not accepted, the owner of the edges has to be specified
+    
+6. Leading and trailing white spaces are ignored, i.e., ' n -> a1 | a2 ' = 'n->a1|a2'
+    
+7. Nodes can be named with multiple chars, that might include white spaces.
+' Hello World -> Lore ipsum ' will result in a node with code='Hello World' and one node in its adjacency list where code='Lore ipsum'
+ 
+8. '|', ':' and '->' are not allowed in node names
+    
+9. A single trailing '|' is valid, as long as it is specified at least one adjacent node, e.g. 'n -> a1 |'
+    
+10. After the name of a node given after '->' (as an adjacent node), the weight of the edge can be specified, following ':'
+    
+11. Once again, any amount of leading or trailing white spaces can be existent between the code of the node or the wight and ':''
+    
+12. The weights can only be integers (for now)    
 
 ---
 
